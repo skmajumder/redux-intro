@@ -2,6 +2,7 @@ import CreateCustomer from "./CreateCustomer";
 import Customer from "./Customer";
 import AccountOperations from "./AccountOperations";
 import BalanceDisplay from "./BalanceDisplay";
+import "./store";
 
 function App() {
   return (

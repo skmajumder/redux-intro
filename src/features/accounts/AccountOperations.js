@@ -16,9 +16,10 @@ function AccountOperations() {
 
   const handleDeposit = () => {
     if (!depositAmount) return;
-    dispatch(diposit(depositAmount));
+    dispatch(diposit(depositAmount, currency));
 
     setDepositAmount("");
+    setCurrency("USD");
   };
 
   const handleWithdrawal = () => {
@@ -89,19 +90,13 @@ function AccountOperations() {
           <button onClick={handleRequestLoan}>Request loan</button>
         </div>
 
-        {currentLoan ? (
+        {currentLoan > 0 && (
           <>
             <div>
               <span>
                 Pay back ${currentLoan} ({currentLoanPurpose})
               </span>
               <button onClick={handlePayLoan}>Pay loan</button>
-            </div>
-          </>
-        ) : (
-          <>
-            <div>
-              <span>*You don't have any loan yet</span>
             </div>
           </>
         )}

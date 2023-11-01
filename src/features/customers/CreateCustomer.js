@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { createCustomer } from "./customerSlice";
 
 function Customer() {
-  const [fullName, setFullName] = useState("");
-  const [nationalId, setNationalId] = useState("");
+  const [fullName, setFullName] = useState("Jonas");
+  const [nationalId, setNationalId] = useState("1234");
 
   const dispatch = useDispatch();
 
